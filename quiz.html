@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> Practice </title>
+    <script type="text/javascript"> //how to add JavaScript to whole page    
+        
+     
+//    // question 5   
+//var day = "MONDAY"; // "MONDAY" - does not equal - "Monday"
+//
+//if (day == "Monday") //condition is flase 
+//
+//{
+//
+//alert("MONDAY"); 
+//
+//}
+//
+//else
+//
+//{
+//
+//alert("NOT MONDAY");
+//
+//}
+//
+//     // question 6 
+//var day = "MONDAY";
+//
+//if (day = "Monday") // if is doing a reassignment becuase there is only one = 
+//
+//{
+//
+//alert(day); // output it "Monday" bc day = day 
+//
+//}
+//
+//else
+//
+//{
+//
+//alert(day);
+//
+//}
+//     
+//     // Question 9 
+//var x = 2;
+//
+//for (var i = 1; 
+//     i < 6; 
+//     i = i + 1)
+//
+//{
+//
+//  alert ("x = x * 2");
+//
+//}
+//// answer is 2^6 = 64 
+//     
+//     
+//     // Question 10 
+//// What is the value of x, y, and z at the end of this JavaScript code?
+//
+//   var x = 1, y =2 , z = 3; //declares variable 
+//   x = 10; // reassigns variable --> becomes reassigned to 4 
+//   y = 32; // reassigns variable 
+//   x = (y + 8) / 10; //reassigns variable x = (32 +8) / 10 = 4 
+//   z = z/3; // z = 3/3 = 1 
+//     
+//// answer x = 4, y=32, z=1
+//     
+//     
+//     //question 11 
+//var x = 5, y = x, z = 5*x; // x=5 y=5 z=25
+//
+//x = Math.max(x,y,z)*2; //reassgined to (Math.max=25) - * 2 --> x=50
+//
+//y = Math.min(y,z); //(Math.min=5) --> y=5
+//
+//z = x/y; // 25=50/5 --> z=10
+//
+//for (var i = 1; i < z; i++)
+//
+//{
+//
+//x = x - y; // x = 50 - 5 --> 45 --> x=45
+//    
+//y = y + x; // y = 5 + 45 --> 50 --> y=50
+//
+//}
+//
+//     
+//// answer --> x=10 y=-5 z=-50   
+        
+        
+        function outputDOM() 
+            { 
+                var myTarget = document.GetElementById("demo");
+     
+                alert(document.getElementById("demo").nodeName);
+         
+                alert(myTarget.nodeName);
+            }
+    </script>
+</head>     
+
+<body>
+    <h1 id="demo"> DOM Example</h1>
+    <p>
+        <input type="button" value="Click Here to View Node" name="btnSubmit" onclick="outputDOM()"/> 
+    </p> 
+</body>
+</html>

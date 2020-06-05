@@ -1,0 +1,38 @@
+x= 2 y = 10/2 z = 2 * 2 
+if (y < z) --> 5 < 4 --> FALSE --> go to next 
+{
+    x=x*y*z; 
+    y=x-z;
+    z=z-y;
+}
+else if (x < y); --> 2 < 5 --> TRUE --> run code 
+{
+    x=x+y+z; --> 2 + 5 + 4 = 11 ( x = 11)
+    y=z+z; --> 4 + 4 = 8        ( x = 8)
+    z=x+z; --> 11 + 4 = 15      ( z = 15)
+}
+
+    ANSWERS 
+x=11 
+y=8
+z=15 
+
+** if, else statements --> you have to find which one to do first ** 
+
+
+
+FACTORIAL LOOPS 
+ - keep track of total (y = 1) 
+ - keep "add" next number (1 - 20) 
+     ex. --> 4 * 3 * 2 * 1 
+1.  for (var x=1;x<=20;x=x+1) --> usually i is used intead of x --> x = 1 , TRUE --> run code --> x = 2 
+    {
+        y = x * y; --> 2 * 1 --> y = 2 
+    }
+2. (x = x + 1) --> x = 3, y = 2 
+    y = 3 * 2 --> 6 
+3. (x = x + 1) --> x = 4, y = 6 
+    y = 6 * 4 --> 24 
+4. (x = x + 1) --> x = 5, y = 24 
+    y = 24 * 5 --> 120 
+        --> CODE KEEPS GOING UNTIL 'X<=20' <-- 

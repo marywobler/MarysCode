@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        
+        <title>Assignment 4</title>
+        
+        <link rel="stylesheet" type="text/css" href="style/assignment4.css"> 
+        
+        <script type="text/javascript"> //how to add JavaScript to whole page 
+            function rollTwoDice()
+            {
+                var rollOne, rollTwo, rollTotal;
+                rollOne = Math.floor((Math.random() * 6) + 1); //will appear as number between 1 and 6 
+                alert ("First die role is..." + rollOne); //add alert text and math 
+                var rollTwo;
+                rollTwo = Math.floor((Math.random() * 6) + 1); 
+                alert ("Second die roll is..." + rollTwo); 
+                var rollTotal;
+                rollTotal = rollOne + rollTwo; 
+                alert ("Total of dice roll.." + rollTotal);
+                alert ("Extra Credit - First Roll: " + rollOne + " | Second Roll: " + rollTwo + " | Roll Total: " + rollTotal); 
+                //make multiple alerts 
+            }
+        </script>
+</head>
+
+<body>
+    <p>Mary Wobler IT 130 </p> 
+    
+    <h1 class="mydicecolor">Let's Roll Some Dice</h1>
+   
+    <p>Here are your dice! Click to roll.</p>
+    
+    <a href="dice.jpg" title="twodice"> <img src="image/dice.jpg" alt="twodice"/></a>
+    
+    <hr>
+    <input type="button" value="Click to Roll"
+           name="btnSubmit" onclick="rollTwoDice()"/>
+    <!-- how to get multiple things to pop up --> 
+
+</body>
+</html>

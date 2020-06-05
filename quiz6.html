@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head> 
+        <meta charset="utf-8">
+        <title> blach </title>
+        <script type="text/javascript">
+            function getStuff()
+            {
+                var color1 = "Blue", color2 = "Black", color3 = "White", color4 = "Red";
+                
+                if (color1 = "Black") //false if, so else is ran
+                    {
+                        document.getElementById("C1").innerHTML = "Color 1" + color1;
+                        //"" = string, nothing = variable
+                        document.getElementById("C2").innerHTML = "Color 2" + color2;
+                    }
+                else 
+                    {
+                        document.getElementById("C1").innerHTML = "Color 1" + color2;
+                        document.getElementById("C2").innerHTML = "Color 2" + color1;
+                    }
+                        document.getElementById("C3").innerHTML = "Color 3" + color4;
+                        document.getElementById("C4").innerHTML = "Color 4" + color3;
+             }
+        </script>
+    </head>
+
+<body> 
+    <h1> Quiz 6</h1><hr>
+    <p id="C1"> Color 1 = White </p>
+    <p id="C2"> Color 2 = Black </p> 
+    <p id="C3"> Color 3 = Red </p>
+    <p id="C4"> Color 4 = Blue </p>
+    
+    <input type="button" value="Click" name="btnSubmit" onclick="getStuff()">
+    
+</body>
+</html>

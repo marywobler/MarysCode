@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Form Retrieval</title>
+	<script type="text/javascript">
+		function doFormStuff()
+		{
+			var firstName, lastName;
+			var favColor;
+            var personAge; 
+            
+			firstName = document.practiceForm.txtFirstName.value;
+			lastName = document.practiceForm.txtLastName.value;
+			favColor = document.practiceForm.selFavColor.value;
+            personAge = document.practiceForm.txtAge.value; 
+
+			alert(firstName);
+			alert(lastName);
+			alert(favColor);
+            alert(personAge);
+            alert ("First Name:" + firstName + "Last Name:" + lastName + "Age:" + personAge + "Favorite Color:" + favColor); 
+		}
+	</script>
+<!-- "firstName, lastName, favColor = how to retrieve form --> 
+</head>
+
+<body>
+    <h1>Retrieving Information from a Form, Part 1</h1>
+    
+    <hr>
+    
+    <p>Notice how in the select box, the option values are quite different from the text between the option tags. </p>
+
+    <form name="practiceForm"> <!-- this is the form --> 
+        <p>First Name: <input type="text" name="txtFirstName" ></p>
+
+        <p>Last Name: <input type="text" name="txtLastName" ></p>
+
+        <p>Age: <input type="text" name="txtAge" ></p>
+
+        <p>Favorite Color:
+	       <select name="selFavColor">
+		      <option value="yellow">Yellow like the sun!</option>
+		      <option value="green">Green like the sea!</option>
+		      <option value="blue">Blue like the sky!</option>
+	       </select>
+        </p>
+
+        <p><input type="button" value="Go!" name="btnSubmit" onclick="doFormStuff()" ></p>
+</form>
+
+</body>
+</html>

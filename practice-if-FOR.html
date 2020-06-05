@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>for...loop Practice</title>
+	<script type="text/javascript">
+		function doFormStuff()
+		{
+			var countDown;
+			
+			countDown = document.practiceForm.numEntered.value;
+			countDown = parseInt(countDown);
+			
+			if (countDown >= 1 && countDown <= 10) 
+			{
+				for (var i = 1; i <= 10; i+ 1)
+				{
+					alert("CountDown" + i);
+				}
+			}
+			else
+			{
+				alert("Your entry was not a number between 1 and 10.  You entered: " + countDown);
+			}
+		}
+	</script>
+</head>
+
+<body>
+<h1>Practice with IF and For...Loop statements</h1>
+<hr>
+<p>User enters a number and then the system outputs a countdown.</p>
+
+<form name="practiceForm">
+<p>Please enter a number between 1 and 10: <input type="num" name="numEntered" ></p>
+
+<p><input type="button" value="Click When Ready" name="btnSubmit" onclick="doFormStuff()" ></p>
+</form>
+
+</body>
+</html>

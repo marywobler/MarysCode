@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Loops Practice </title>
+	<script type="text/javascript">
+		function doLoops()
+		{
+			var age;
+			
+			age = document.practiceForm.txtAge.value;
+			age = parseInt(age);
+			
+			if (age >= 1 && age<=10) //foreloop goes here
+			{
+				alert("Correct!");
+			}
+			else
+			{
+            alert("Not a number between 1 - 10");
+            }
+        }
+	</script>
+</head>
+
+<body>
+
+<form name="practiceForm">
+<p>Please enter a number: <input type="num" name="txtAge" ></p>
+
+<p><input type="button" value="Click Here" name="btnSubmit" onclick="doLoops()" ></p>
+</form>
+
+</body>
+</html>

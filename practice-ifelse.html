@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Functions Example</title>  
+	<script type="text/javascript">
+    	function rentalCar() 
+	       {
+               var firstName;
+               var lastName;
+               var personAge; 
+
+               firstName = document.form.txtFirstName.value; 
+               lastName = document.form.txtLastName.value; 
+               personAge = document.form.txtPersonAge.value; 
+               personAge = parseInt(age); 
+
+               // STADARD IF/ELSE 
+               if (personAge < 18) {
+                alert ("You get A car!" + personAge);                
+                } 
+                else {
+                alert ("Rent Bike from Divy" + personAge); 
+                }
+                alert("Enjoy the Movie!");
+               
+            }
+        
+              //  STANDARD LOOP
+            if (age >=18 && age <=90)
+                {
+                  alert("You get a car");
+                }
+            else if (Age >90) 
+                {
+                 alert("You should take a Taxi!");
+                }
+            else
+                {
+                  alert ("You should rent a bike from Divvy!");    
+                }
+        
+    </script>
+</head>
+<body>
+   <p>Can you rent a car?</p>	
+     <form name="form"> <!-- this is the form --> 
+        <p>First Name: <input type="text" name="txtFirstName" ></p>
+
+        <p>Last Name: <input type="text" name="txtLastName" ></p>
+
+        <p>Age: <input type="text" name="txtPersonAge" ></p>
+         
+        <p> <input type="button" value="Rent Car" name="btnSubmit" onclick="rentalCar()"> </p> 
+    </form>
+         
+</body>
+</html>

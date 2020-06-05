@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+    <title>Assignment 5</title>
+	
+    <link rel="stylesheet" type="text/css" href="style/assignment5.css"> 
+    
+    <script type="text/javascript">
+		function personalForm()
+		{
+			var firstName; 
+            var lastName;
+			var streetAddress;
+            var locationCity; 
+            var locationState;
+            var locationZipCode; 
+            var itemsToBuy; 
+            var itemsAmount; 
+            var itemsTotal;
+            
+			firstName = document.practiceForm.txtFirstName.value;
+			lastName = document.practiceForm.txtLastName.value;
+			streetAddress = document.practiceForm.txtStreetAddress.value;
+            locationCity = document.practiceForm.txtLocationCity.value; 
+            locationState = document.practiceForm.txtLocationState.value; 
+            locationZipCode = document.practiceForm.txtLocationZipCode.value; 
+            itemsToBuy = document.practiceForm.selItemsToBuy.value;
+            itemsAmount = document.practiceForm.txtItemsAmount.value; 
+            itemsTotal = itemsToBuy * itemsAmount; 
+            
+			alert("Name: " + firstName + lastName);
+			alert("Address: " + streetAddress);
+            alert(" City: " + locationCity + " State: " + locationState + " Zip Code: " + locationZipCode);
+            alert ("The price of your item: " + itemsToBuy);
+            alert (" Total Price of Item: " + itemsTotal); 
+        } 
+	</script>
+</head>
+
+<body>
+    <h1>Retrieving Personal and Shopping Information</h1>
+    
+    <hr>
+    
+    <p>Hello! 
+        Please input your information so we know where you are located. Then choose what you would like to buy, and how many of each item! </p>
+
+    <form name="practiceForm"> <!-- this is the form --> 
+        <p>First Name: <input type="text" name="txtFirstName" ></p>
+
+        <p>Last Name: <input type="text" name="txtLastName" ></p>
+
+        <p>Street Address: <input type="text" name="txtStreetAddress" ></p>
+        
+        <p>City: <input type="text" name="txtLocationCity" ></p>
+
+        <p>State: <input type="text" name="txtLocationState" ></p>
+
+        <p>Zip Code: <input type="text" name="txtLocationZipCode" ></p>
+
+        <p class="mycolor">Items to Buy:
+	       <select name="selItemsToBuy">
+		      <option value="20">Green Shirt - $20 Each </option>
+		      <option value="60">Blue Jeans - $60 Each </option>
+		      <option value="50">Pink VANS - $50 Each </option>
+	       </select>
+            
+        <form name="practiceForm">
+            <p class="mycolor">Please enter amount: <input type="num" name="txtItemsAmount" ></p>
+
+            <p><input type="button" value="Go!" name="btnSubmit" onclick="personalForm()" > </p>
+        </form>
+
+</body>
+</html>

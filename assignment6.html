@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Assignment 6</title>
+	<script type="text/javascript">
+		function diceRoll() 
+        {
+			
+			var rollsNum, favNum;
+			var rollOne, rollTwo, currentRollTotal, overallRollTotal, overallRollAverage;
+			var rollEqualOne, rollEqualTwo, rollEqualThree, rollEqualFour, rollEqualFive, rollEqualSix;
+
+			rollOne = rollTwo = currentRollTotal = overallRollTotal = overallRollAverage = 0; 
+            //set to 0 so loop has somewhere to start
+
+			rollEqualOne = rollEqualTwo = rollEqualThree = rollEqualFour = rollEqualFive = rollEqualSix = 0; //set to 0 so loop has somewhere to start
+
+			rollsNum = document.getElementById("numPicked").value; //has to equal id at input 
+            favNum = document.getElementById("favNum").value; //has to equal id at input 
+
+			if ((rollsNum >= 1 && rollsNum <= 100) && (favNum >= 1 && favNum <= 6)) {
+				for (var i = 0; i <= rollsNum; i++) //++ allows for add 1 to every number rolled 
+                { 
+					rollOne = Math.floor((Math.random() * 6) + 1); //will make number between 1 and 6 for dice one 
+					rollTwo = Math.floor((Math.random() * 6) + 1); //will make number between 1 and 6 for dice two 
+					currentRollTotal = (rollOne + rollTwo); //becuase two dice 
+					overallRollTotal = (overallRollTotal + currentRollTotal); 
+
+					if (rollOne == 1)
+					{
+						rollEqualOne += 1; // += allows for 1 added to number rolled
+					} else if (rollOne == 2)
+					{
+						rollEqualTwo += 1;
+					} else if (rollOne == 3)
+					{
+						rollEqualThree += 1;
+					} else if (rollOne == 4)
+					{
+						rollEqualFour += 1;
+					} else if (rollOne == 5)
+					{
+						rollEqualFive += 1;
+					} else
+					{
+						rollEqualSix += 1;
+					}
+
+					if (rollTwo == 1)
+					{
+						rollEqualOne += 1;
+					} else if (rollTwo == 2)
+					{
+						rollEqualTwo += 1;
+					} else if (rollTwo == 3)
+					{
+						rollEqualThree += 1;
+					} else if (rollTwo == 4)
+					{
+						rollEqualFour += 1;
+					} else if (rollTwo == 5)
+					{
+						rollEqualFive += 1;
+					} else
+					{
+						rollEqualSix += 1;
+					}
+
+				}
+				
+				overallRollAverage = (overallRollTotal / rollsNum);
+                //math to find average 
+				var numOfRollsTotal, totalNumOfAllRolls, totalAvgOfRolls, rollOneTotal, rollTwoTotal, rollThreeTotal, rollFourTotal, rollFiveTotal, rollSixTotal; 
+				
+				numOfRollsTotal = ("Number of Rolls Selected is: " + rollsNum);		//comes from in first if statement 
+				totalNumOfAllRolls = ("The total for " + rollsNum + " rolls was: " + overallRollTotal);
+				totalAvgOfRolls =("The average for " + rollsNum + " rolls was: " + overallRollAverage);
+				rollOneTotal = ("The number of 1's was: " + rollEqualOne);
+				rollTwoTotal = ("The number of 2's was: " + rollEqualTwo);
+				rollThreeTotal = ("The number of 3's was: " + rollEqualThree);
+				rollFourTotal = ("The number of 4's was: " + rollEqualFour);
+				rollFiveTotal = ("The number of 5's was: " + rollEqualFive);
+				rollSixTotal = ("The number of 6's was: " + rollEqualSix);
+				
+				document.getElementById("results").innerHTML = numOfRollsTotal + "<br />" + totalNumOfAllRolls + "<br />" + totalAvgOfRolls + "<br />" + rollOneTotal + "<br />" + rollTwoTotal + "<br />" + rollThreeTotal + "<br />" + rollFourTotal + "<br />" + rollFiveTotal + "<br />" + rollSixTotal;
+                //<br> so content appears on own line
+            }
+        }
+	</script>
+</head>
+
+<body>
+Mary Wobler IT130
+    <h1>Assignment 6 - Rolling for You! </h1>
+        <hr>
+        <p>Please fill out the following information: </p>
+
+        <p>Please enter a number between 1 and 100: <input type="number" name="numPickedInput" id="numPicked"></p> <!--form input--> 
+        
+        <p>Please enter a number between 1 and 6: <input type="number" name="numChosenInput" id="favNum"></p> <!--form input--> 
+        
+	   <p><input type="button" value="Click To Roll" name="btnSubmit" onclick="diceRoll()"> </p>
+	
+		<p id="results"></p> <!-- how to get content to appear on page --> 
+
+</body>
+</html>
