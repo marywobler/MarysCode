@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Array Example</title>
+		<script type="text/javascript">
+			function outputArray()
+			{
+				var cars = ["Saab", "Volvo", "BMW"]; 
+				
+				for (var i = 0; i < cars.length; i++)
+				{
+					alert ("cars[" + i + "] equals " + cars[i])
+				}
+				
+				cars.push("Chevy");
+				cars.push("Edsel");
+				
+				for (var i = 0; i < cars.length; i++)
+				{
+					alert ("cars[" + i + "] equals " + cars[i])
+				}
+				
+				cars.pop();
+				
+				for (var i = 0; i < cars.length; i++)
+				{
+					alert ("cars[" + i + "] equals " + cars[i])
+				}
+				
+				cars.sort();
+				
+				for (var i = 0; i < cars.length; i++)
+				{
+					alert ("cars[" + i + "] equals " + cars[i])
+				}
+			}
+		</script>	
+	</head>
+
+	<body>
+		<h1 id="demo">Array Example</h1>
+		<p>Please click the button when ready.</p>
+		<p>
+			<input type="button" value="Click When Ready" name="btnSubmit" onclick="outputArray()">
+		</p>
+	</body>
+</html>
